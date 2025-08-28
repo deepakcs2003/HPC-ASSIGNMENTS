@@ -1,13 +1,16 @@
-#include<bits/stdc++.h>
+#include <iostream>
 #include <omp.h>
-
 using namespace std;
 
 int main() {
-
-    #pragma omp parallel
+    // Parallel region with 4 threads
+    #pragma omp parallel num_threads(4)
     {
-        int tid = omp_get_thread_num();
-        cout << "Hello duniya from " << tid << "\n";
+        int thread_id = omp_get_thread_num();   
+
+        cout << "Hello, World " 
+             << thread_id  << endl;
     }
+
+    return 0;
 }

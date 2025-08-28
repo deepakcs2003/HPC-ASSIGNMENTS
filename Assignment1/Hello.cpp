@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
-    #pragma omp parallel
+    #pragma omp parallel num_threads(3)
     {
 
         cout << "Hello world\n";
